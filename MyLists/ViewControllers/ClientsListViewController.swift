@@ -19,7 +19,7 @@ class ClientsListViewController: UITableViewController {
         
         setNavBar()
         fetchData()
-        title = String(clients.count)
+        title = totalCash()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,7 +31,7 @@ class ClientsListViewController: UITableViewController {
         let client = clients[indexPath.row]
         
         cell.nameLabel.text = client.name
-        cell.cashLabel.text = client.cash
+        cell.cashLabel.text = (client.cash ?? "") + " ₽"
         
         return cell
     }
@@ -59,6 +59,17 @@ class ClientsListViewController: UITableViewController {
             }
         }
     }
+    
+    private func totalCash() -> String {
+        
+        var totalCash = 0
+        
+        for client in clients {
+            guard let cash = client.cash else { return "" }
+            totalCash += Int(cash) ?? 0
+        }
+        return "\(totalCash) ₽"
+    }
 }
 
 
@@ -72,7 +83,7 @@ extension ClientsListViewController {
             clients.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             StorageManager.shared.delete(client)
-            self.navigationItem.title = "Hi " + "\(self.clients.count)"
+            self.navigationItem.title = totalCash()
         }
     }
     
@@ -97,7 +108,7 @@ extension ClientsListViewController {
                 comletion()
             } else {
                 self.save(clientName: clientName, clientCash: clientCash)
-                self.navigationItem.title = "Hi " + "\(self.clients.count)"
+                self.navigationItem.title = self.totalCash()
             }
         }
         

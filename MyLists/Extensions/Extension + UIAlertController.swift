@@ -31,6 +31,7 @@ extension UIAlertController {
             textField.text = client?.name
         }
         addTextField { textField in
+            textField.keyboardType = .numberPad
             textField.placeholder = "Cash"
             textField.text = client?.cash
         }
