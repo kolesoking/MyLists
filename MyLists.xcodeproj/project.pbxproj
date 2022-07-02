@@ -13,6 +13,10 @@
 		C4C4CD14286F2BD900FC3EC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4C4CD13286F2BD900FC3EC5 /* Assets.xcassets */; };
 		C4C4CD17286F2BD900FC3EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4C4CD15286F2BD900FC3EC5 /* LaunchScreen.storyboard */; };
 		C4C4CD25286F376F00FC3EC5 /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4CD24286F376F00FC3EC5 /* Extension + UIViewController.swift */; };
+		C4C4CD28286F42D400FC3EC5 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4CD27286F42D400FC3EC5 /* StorageManager.swift */; };
+		C4C4CD2A286F475000FC3EC5 /* Extension + UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4CD29286F475000FC3EC5 /* Extension + UIAlertController.swift */; };
+		C4C4CD352870A2B700FC3EC5 /* ClientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4CD332870A2B700FC3EC5 /* ClientTableViewCell.swift */; };
+		C4C4CD362870A2B700FC3EC5 /* ClientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4C4CD342870A2B700FC3EC5 /* ClientTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		C4C4CD16286F2BD900FC3EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4C4CD18286F2BD900FC3EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4C4CD24286F376F00FC3EC5 /* Extension + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
+		C4C4CD27286F42D400FC3EC5 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		C4C4CD29286F475000FC3EC5 /* Extension + UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIAlertController.swift"; sourceTree = "<group>"; };
+		C4C4CD332870A2B700FC3EC5 /* ClientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTableViewCell.swift; sourceTree = "<group>"; };
+		C4C4CD342870A2B700FC3EC5 /* ClientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClientTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +64,13 @@
 		C4C4CD06286F2BD700FC3EC5 /* MyLists */ = {
 			isa = PBXGroup;
 			children = (
+				C4C4CD322870A2A300FC3EC5 /* View */,
+				C4C4CD26286F42B600FC3EC5 /* Services */,
 				C4C4CD23286F373100FC3EC5 /* Extensions */,
-				C4C4CD21286F30A800FC3EC5 /* Resources */,
 				C4C4CD1F286F308700FC3EC5 /* ViewControllers */,
 				C4C4CD1E286F307B00FC3EC5 /* App */,
 				C4C4CD20286F309400FC3EC5 /* CoreData */,
+				C4C4CD21286F30A800FC3EC5 /* Resources */,
 				C4C4CD22286F30BB00FC3EC5 /* Storyboards */,
 			);
 			path = MyLists;
@@ -111,8 +121,26 @@
 			isa = PBXGroup;
 			children = (
 				C4C4CD24286F376F00FC3EC5 /* Extension + UIViewController.swift */,
+				C4C4CD29286F475000FC3EC5 /* Extension + UIAlertController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C4C4CD26286F42B600FC3EC5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C4C4CD27286F42D400FC3EC5 /* StorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C4C4CD322870A2A300FC3EC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4C4CD332870A2B700FC3EC5 /* ClientTableViewCell.swift */,
+				C4C4CD342870A2B700FC3EC5 /* ClientTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C4CD362870A2B700FC3EC5 /* ClientTableViewCell.xib in Resources */,
 				C4C4CD17286F2BD900FC3EC5 /* LaunchScreen.storyboard in Resources */,
 				C4C4CD14286F2BD900FC3EC5 /* Assets.xcassets in Resources */,
 			);
@@ -187,7 +216,10 @@
 			files = (
 				C4C4CD0C286F2BD700FC3EC5 /* ClientsListViewController.swift in Sources */,
 				C4C4CD12286F2BD700FC3EC5 /* MyLists.xcdatamodeld in Sources */,
+				C4C4CD28286F42D400FC3EC5 /* StorageManager.swift in Sources */,
+				C4C4CD352870A2B700FC3EC5 /* ClientTableViewCell.swift in Sources */,
 				C4C4CD25286F376F00FC3EC5 /* Extension + UIViewController.swift in Sources */,
+				C4C4CD2A286F475000FC3EC5 /* Extension + UIAlertController.swift in Sources */,
 				C4C4CD08286F2BD700FC3EC5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

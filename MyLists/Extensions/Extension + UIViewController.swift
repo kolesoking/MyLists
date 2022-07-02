@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIViewController {
+extension ClientsListViewController {
     
     func setNavBar() {
         
@@ -28,5 +28,11 @@ extension UIViewController {
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(addNewClient)
+        )
     }
 }
